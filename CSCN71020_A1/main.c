@@ -3,7 +3,7 @@
 void printWelcomeMenu();
 void printOptions();
 void add();
-
+void subtract();
 
 void main() {
 
@@ -20,6 +20,10 @@ void main() {
 	{
 	case 1:
 		add();
+	case 2:
+		subtract();
+	default:
+		printf("Invlaid entry");
 	}
 
 }
@@ -38,10 +42,21 @@ void printOptions() {
 
 void add() {
 	double num1, num2, result;
-	printf("Enter the first value:");
+	printf("Enter the first value: ");
 	scanf_s("%lf", &num1);
-	printf("Enter the second value:");
+	printf("Enter the second value: ");
 	scanf_s("%lf", &num2);
 	result = num1 + num2;
 	printf("%lf + %lf = %lf\n", num1, num2, result);
+}
+
+
+void subtract() {
+	double num1, num2, result;
+	printf("Enter the first value: ");
+	scanf_s("%lf", &num1);
+	printf("Enter the second value: ");
+	scanf_s("%lf", &num2);
+	result = num1 - num2;
+	printf("%lf - %lf = %lf\n", num1, num2, result);
 }
